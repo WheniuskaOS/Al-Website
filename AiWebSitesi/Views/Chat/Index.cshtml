@@ -1,0 +1,17 @@
+@{
+    ViewData["Title"] = "YiğitGPT";
+}
+
+<h2>YiğitGPT 🤖</h2>
+
+<form method="post">
+    <input type="text" name="message" style="width:300px;" placeholder="Mesaj yaz..." />
+    <button type="submit">Gönder</button>
+</form>
+
+@if (ViewBag.UserMessage != null)
+{
+    <hr />
+    <p><strong>Sen:</strong> @ViewBag.UserMessage</p>
+    <p><strong>GPT:</strong> @ViewBag.Response</p>
+}
